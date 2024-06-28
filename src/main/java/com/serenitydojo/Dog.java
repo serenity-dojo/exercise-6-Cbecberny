@@ -1,9 +1,11 @@
 package com.serenitydojo;
 
+import com.serenitydojo.model.Pet;
+
 public class Dog extends Pet {
     private String favoriteToy;
     private boolean isFed = false;
-
+    int age;
     public static final String DOG_NOISE = "Woof";
 
     public Dog(String name, String favoriteToy, int age) {
@@ -33,5 +35,9 @@ public class Dog extends Pet {
     @Override
     public String play() {
         return "plays with bone";
+    }
+
+    public int getAge() {
+        return age;
     }
 }

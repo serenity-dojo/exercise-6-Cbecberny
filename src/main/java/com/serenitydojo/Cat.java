@@ -1,5 +1,7 @@
 package com.serenitydojo;
 
+import com.serenitydojo.model.Pet;
+
 public class Cat extends Pet {
     private String name;
     private String favoriteToy;
