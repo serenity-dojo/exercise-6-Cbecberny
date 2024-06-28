@@ -10,27 +10,27 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class DogClassTest {
     @Test
     public void theDogClassShouldExist() throws ClassNotFoundException {
-        assertThat(Class.forName("com.serenitydojo.Dog")).isNotNull();
+        assertThat(Class.forName("com.serenitydojo.model.Dog")).isNotNull();
     }
 
     @Test
     public void shouldBeAPet() throws Exception {
-        assertThat(Class.forName("com.serenitydojo.Dog").getSuperclass().getSimpleName()).isEqualTo("Pet");
+        assertThat(Class.forName("com.serenitydojo.model.Dog").getSuperclass().getSimpleName()).isEqualTo("Pet");
     }
 
     @Test
     public void theDogClassShouldHaveAFavoriteToy() throws Exception {
-        assertThat(Class.forName("com.serenitydojo.Dog").getDeclaredField("favoriteToy").getGenericType()).isEqualTo(String.class);
+        assertThat(Class.forName("com.serenitydojo.model.Dog").getDeclaredField("favoriteToy").getGenericType()).isEqualTo(String.class);
     }
 
     @Test
     public void theDogClassShouldHaveAMethodCalledMakeNoise() throws Exception {
-        assertThat(Class.forName("com.serenitydojo.Dog").getMethod("makeNoise").getReturnType()).isEqualTo(String.class);
+        assertThat(Class.forName("com.serenitydojo.model.Dog").getMethod("makeNoise").getReturnType()).isEqualTo(String.class);
     }
 
     @Test
     public void theDogClassShouldHaveAConstantField_MAKE_NOISE() throws Exception {
-        Field makeNoise = Class.forName("com.serenitydojo.Dog").getDeclaredField("DOG_NOISE");
+        Field makeNoise = Class.forName("com.serenitydojo.model.Dog").getDeclaredField("DOG_NOISE");
         assertThat(makeNoise.getType()).isEqualTo(String.class);
         assertThat(Modifier.isFinal(makeNoise.getModifiers())).isTrue();
         assertThat(Modifier.isStatic(makeNoise.getModifiers())).isTrue();

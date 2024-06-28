@@ -1,6 +1,4 @@
-package com.serenitydojo;
-
-import com.serenitydojo.model.Pet;
+package com.serenitydojo.model;
 
 public class Dog extends Pet {
     private String favoriteToy;

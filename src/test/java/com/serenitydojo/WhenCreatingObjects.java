@@ -1,6 +1,8 @@
 package com.serenitydojo;
 
-import com.serenitydojo.Hampster;
+import com.serenitydojo.model.Cat;
+import com.serenitydojo.model.Dog;
+import com.serenitydojo.model.Hampster;
 import com.serenitydojo.model.Pet;
 import org.junit.Assert;
 import org.junit.Test;

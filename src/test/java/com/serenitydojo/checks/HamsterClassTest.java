@@ -25,12 +25,12 @@ public class HamsterClassTest {
 
     @Test
     public void theDogClassShouldHaveAMethodCalledMakeNoise() throws Exception {
-        assertThat(Class.forName("com.serenitydojo.Dog").getMethod("makeNoise").getReturnType()).isEqualTo(String.class);
+        assertThat(Class.forName("com.serenitydojo.model.Dog").getMethod("makeNoise").getReturnType()).isEqualTo(String.class);
     }
 
     @Test
     public void theDogClassShouldHaveAConstantField_MAKE_NOISE() throws Exception {
-        Field makeNoise = Class.forName("com.serenitydojo.Dog").getDeclaredField("DOG_NOISE");
+        Field makeNoise = Class.forName("com.serenitydojo.model.Dog").getDeclaredField("DOG_NOISE");
         assertThat(makeNoise.getType()).isEqualTo(String.class);
         assertThat(Modifier.isFinal(makeNoise.getModifiers())).isTrue();
         assertThat(Modifier.isStatic(makeNoise.getModifiers())).isTrue();
